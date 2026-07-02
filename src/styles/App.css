@@ -258,3 +258,9 @@ html {
   color: #991b1b;
   font-size: 0.85rem;
 }
+
+.post-meta {
+  color: #6b7280;
+  font-size: 0.9rem;
+  font-weight: 500;
+}

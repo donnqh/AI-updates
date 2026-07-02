@@ -36,7 +36,7 @@ export default function RssSources({ feeds = [], failedFeeds = [] }) {
                                     <h3>{feed.name}</h3>
 
                                     <span className={hasFailed ? "status-badge failed" : "status-badge active"}>
-                                        {hasFailed ? "Failed" : "Active"}
+                                        {hasFailed ? "Unavailable" : "Active"}
                                     </span>
                                 </div>
                                 <a href={feed.url} target="_blank" rel="noopener noreferrer">

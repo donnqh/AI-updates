@@ -1,5 +1,26 @@
 import "../styles/App.css";
 
+function formatDate(dateString) {
+  //if no date, show message
+  if (!dateString || dateString === "No date") {
+    return "No date available";
+  }
+
+  const date = new Date(dateString);
+
+  //if date is invalid format, show message
+  if (Number.isNaN(date.getTime())) {
+    return "No date available";
+  }
+
+  //format date 
+  return date.toLocaleDateString("en-SG", {
+    day: "numeric",
+    month: "numeric",
+    year: "numeric",
+  });
+}
+
 //receives data from app
 export default function NewsSection({ data }) {
   return (
@@ -29,8 +50,8 @@ export default function NewsSection({ data }) {
 
             <p>{post.message}</p>
 
-            <p>
-              {post.source} - {post.date}
+            <p className="post-meta">
+              {post.source} · {formatDate(post.date)}
             </p>
 
             {/* button to open to a new broswer tab */}
