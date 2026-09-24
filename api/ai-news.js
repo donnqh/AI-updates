@@ -16,7 +16,8 @@ const relatedKeywords = [
   "github",
 ];
 
-//rss sources
+// RSS sources. Publishers with known paid article content are omitted.
+// See docs/news-sources.md for the selection policy and its limitations.
 const feeds = [
   {
     name: "MIT News - Artificial Intelligence",
@@ -35,24 +36,28 @@ const feeds = [
     url: "https://www.amazon.science/index.rss",
   },
   {
+    name: "Google DeepMind",
+    url: "https://deepmind.google/blog/rss.xml",
+  },
+  {
+    name: "Google Research",
+    url: "https://research.google/blog/rss/",
+  },
+  {
+    name: "Hugging Face",
+    url: "https://huggingface.co/blog/feed.xml",
+  },
+  {
+    name: "NVIDIA AI",
+    url: "https://blogs.nvidia.com/blog/category/generative-ai/feed/",
+  },
+  {
     name: "TechCrunch",
     url: "https://techcrunch.com/category/artificial-intelligence/feed/",
   },
   {
-    name: "Fast Company",
-    url: "http://feeds.feedburner.com/fastcompany/headlines",
-  },
-  {
     name: "The Guardian",
     url: "https://www.theguardian.com/us/technology/rss",
-  },
-  {
-    name: "The Verge",
-    url: "http://www.theverge.com/rss/full.xml",
-  },
-  {
-    name: "ByteByteGo",
-    url: "https://blog.bytebytego.com/feed",
   },
   {
     name: "Hacker News",
@@ -61,10 +66,6 @@ const feeds = [
   {
     name: "Ars Technica",
     url: "https://feeds.arstechnica.com/arstechnica/index",
-  },
-  {
-    name: "The Pragmatic Engineer",
-    url: "https://newsletter.pragmaticengineer.com/feed",
   },
   {
     name: "TLDR",
